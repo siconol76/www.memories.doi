@@ -627,3 +627,199 @@ SCROLLBAR
 ::-webkit-scrollbar-track {
   background: #ffffff22;
 }
+/* ===========================
+TABLET
+=========================== */
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 320px;
+    max-width: 100%;
+  }
+
+  .hero .glass {
+    width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  .letter {
+    padding: 30px 20px;
+  }
+}
+
+/* ===========================
+MOBILE
+=========================== */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav ul li {
+    list-style: none;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 25px 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-image img {
+    width: 260px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 18px;
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  .letter h2 {
+    font-size: 28px;
+  }
+
+  .letter p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .menu-card {
+    padding: 25px;
+  }
+
+  .footer-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+}
+
+/* ===========================
+HP KECIL
+=========================== */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero button {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 220px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    display: block;
+  }
+
+  .caption {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
