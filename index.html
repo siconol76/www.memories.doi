@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login - Our Memories ❤️</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Poppins, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        background: linear-gradient(135deg, #ff6ea8, #ff94c2, #ffc8dd);
+
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+
+        position: absolute;
+
+        width: 250%;
+
+        height: 250%;
+
+        background: radial-gradient(circle, #ffffff22 2px, transparent 2px);
+
+        background-size: 40px 40px;
+
+        animation: bg 40s linear infinite;
+      }
+
+      @keyframes bg {
+        from {
+          transform: translateY(0);
+        }
+
+        to {
+          transform: translateY(-300px);
+        }
+      }
+
+      .login {
+        position: relative;
+
+        width: 420px;
+
+        padding: 45px;
+
+        border-radius: 25px;
+
+        background: rgba(255, 255, 255, 0.15);
+
+        backdrop-filter: blur(20px);
+
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+        text-align: center;
+
+        color: white;
+
+        z-index: 10;
+
+        animation: fade 0.8s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+
+          transform: translateY(0);
+        }
+      }
+
+      .login h1 {
+        font-family: "Great Vibes", cursive;
+
+        font-size: 55px;
+
+        margin-bottom: 10px;
+      }
+
+      .login p {
+        margin-bottom: 30px;
+
+        opacity: 0.9;
+      }
+
+      .input {
+        position: relative;
+
+        margin: 18px 0;
+      }
+
+      .input input {
+        width: 100%;
+
+        padding: 15px 45px 15px 15px;
+
+        border: none;
+
+        border-radius: 15px;
+
+        outline: none;
+
+        font-size: 16px;
+      }
+
+      .input i {
+        position: absolute;
+
+        right: 15px;
+
+        top: 17px;
+
+        color: #888;
+      }
+
+      button {
+        width: 100%;
+
+        padding: 15px;
+
+        border: none;
+
+        border-radius: 15px;
+
+        background: #ff4f8b;
+
+        color: white;
+
+        font-size: 18px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #ff2b73;
+
+        transform: translateY(-3px);
+      }
+
+      #error {
+        margin-top: 15px;
+
+        color: yellow;
+
+        font-size: 15px;
+      }
+
+      .footer {
+        margin-top: 20px;
+
+        font-size: 14px;
+
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>❤️ Our Memories</h1>
+
+      <p>Masuk untuk melihat semua memories anda</p>
+
+      <div class="input">
+        <input type="text" id="username" placeholder="Username" />
+
+        <i class="fa fa-user"></i>
+      </div>
+
+      <div class="input">
+        <input type="password" id="password" placeholder="Password" />
+
+        <i class="fa fa-lock"></i>
+      </div>
+
+      <button id="loginBtn">Masuk</button>
+
+      <div id="error"></div>
+
+      <div class="footer">Made with ❤️</div>
+    </div>
+
+    <script>
+      const USERNAME = "oky&dian";
+
+      const PASSWORD = "123456";
+
+      document.getElementById("loginBtn").onclick = login;
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          login();
+        }
+      });
+
+      function login() {
+        const user = document.getElementById("username").value.trim();
+
+        const pass = document.getElementById("password").value.trim();
+
+        if (user === USERNAME && pass === PASSWORD) {
+          localStorage.setItem("login", "true");
+
+          localStorage.setItem("user", user);
+
+          window.location.href = "home.html";
+        } else {
+          document.getElementById("error").innerHTML =
+            "❌ Username atau Password salah";
+        }
+      }
+    </script>
+  </body>
+</html>

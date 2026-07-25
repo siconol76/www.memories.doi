@@ -1,0 +1,311 @@
+/* ===========================
+ANIMATION
+=========================== */
+
+@keyframes heartbeat {
+  0% {
+    transform: rotate(45deg) scale(0.8);
+  }
+
+  50% {
+    transform: rotate(45deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
+}
+
+/* ===========================
+FLOAT IMAGE
+=========================== */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ===========================
+FADE UP
+=========================== */
+
+.fade-up {
+  opacity: 0;
+
+  transform: translateY(60px);
+
+  transition: 1s;
+}
+
+.fade-up.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* ===========================
+ZOOM IN
+=========================== */
+
+.zoom {
+  opacity: 0;
+
+  transform: scale(0.8);
+
+  transition: 1s;
+}
+
+.zoom.show {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+/* ===========================
+LEFT
+=========================== */
+
+.left {
+  opacity: 0;
+
+  transform: translateX(-80px);
+
+  transition: 1s;
+}
+
+.left.show {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* ===========================
+RIGHT
+=========================== */
+
+.right {
+  opacity: 0;
+
+  transform: translateX(80px);
+
+  transition: 1s;
+}
+
+.right.show {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* ===========================
+ROTATE
+=========================== */
+
+.rotate {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+HEART FLOAT
+=========================== */
+
+.heart {
+  position: fixed;
+
+  font-size: 20px;
+
+  pointer-events: none;
+
+  animation: heartFly 4s linear forwards;
+
+  z-index: 99999;
+}
+
+@keyframes heartFly {
+  0% {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translateY(-180px) scale(2);
+  }
+}
+
+/* ===========================
+SAKURA
+=========================== */
+
+.sakura {
+  position: fixed;
+
+  top: -50px;
+
+  font-size: 20px;
+
+  pointer-events: none;
+
+  animation: sakuraFall linear infinite;
+
+  opacity: 0.8;
+
+  z-index: 1;
+}
+
+@keyframes sakuraFall {
+  0% {
+    transform: translateY(-50px) translateX(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(25vh) translateX(30px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(-30px) rotate(180deg);
+  }
+
+  75% {
+    transform: translateY(75vh) translateX(30px) rotate(270deg);
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(-30px) rotate(360deg);
+  }
+}
+
+/* ===========================
+BACKGROUND
+=========================== */
+
+body {
+  background-size: 400% 400%;
+
+  animation: bgMove 18s ease infinite;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===========================
+GLASS HOVER
+=========================== */
+
+.glass {
+  transition: 0.5s;
+}
+
+.glass:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+CARD
+=========================== */
+
+.card {
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.card img {
+  transition: 8s;
+}
+
+.card:hover img {
+  transform: scale(1.15);
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+button {
+  transition: 0.4s;
+}
+
+button:hover {
+  transform: translateY(-5px);
+}
+
+/* ===========================
+LOADER
+=========================== */
+
+.hideLoader {
+  opacity: 0;
+
+  visibility: hidden;
+}
+
+/* ===========================
+MENU
+=========================== */
+
+.menu-card {
+  transition: 0.4s;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* ===========================
+LIGHTBOX
+=========================== */
+
+#lightbox img {
+  animation: zoomOpen 0.4s;
+}
+
+@keyframes zoomOpen {
+  from {
+    transform: scale(0.5);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}

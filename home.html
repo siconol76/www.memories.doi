@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>❤️ Our Memories</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/animation.css" />
+
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="loader">
+      <div class="loader-heart"></div>
+
+      <h2>Loading Memories...</h2>
+    </div>
+
+    <audio id="music" loop>
+      <source
+        src="assets/audio/Seribu Bidadari - Ary Kencana (Official wedding videoclip Gede & Ayu).mp3"
+      />
+    </audio>
+
+    <div id="cursor-heart"></div>
+
+    <div id="particles"></div>
+
+    <nav>
+      <div class="logo">❤️ Our Memories</div>
+
+      <ul>
+        <li>
+          <a href="index.html"> Home </a>
+        </li>
+
+        <li>
+          <a href="#section-title"> Album </a>
+        </li>
+
+        <li>
+          <a href="timeline.html"> Timeline </a>
+        </li>
+
+        <li>
+          <a href="surat.html"> Love Letter </a>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="musicBtn">
+          <i class="fa-solid fa-music"></i>
+        </button>
+
+        <button id="darkBtn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+
+        <script>
+          function logout() {
+            localStorage.removeItem("login");
+            localStorage.removeItem("user");
+
+            location.href = "index.html";
+          }
+        </script>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="glass">
+        <h1>Every Love Story Is Beautiful</h1>
+
+        <h2>But Ours Is My Favorite ❤️</h2>
+
+        <p>
+          Semua foto, cerita, tawa, dan kenangan kita akan selalu tersimpan di
+          sini. Website ini dibuat khusus untuk kita berdua.
+        </p>
+
+        <div class="hero-button">
+          <a href="#section-title">
+            <button>📸 Album</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/img/couple.png" />
+      </div>
+    </header>
+
+    <section id="section-title" class="section-title">
+      <h2>❤️ Galeri Memories</h2>
+
+      <p>Beberapa momen doi.</p>
+    </section>
+
+    <section class="gallery">
+      <div class="card">
+        <img src="assets/img/foto1.jpg" />
+
+        <div class="caption">Liburan Bersama</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto2.jpg" />
+
+        <div class="caption">Dinner Romantis</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto3.jpg" />
+
+        <div class="caption">Pantai</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto4.jpg" />
+
+        <div class="caption">Sunset</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto5.jpg" />
+
+        <div class="caption">Hari Bahagia</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto6.jpg" />
+
+        <div class="caption">Always Together ❤️</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto7.jpg" />
+
+        <div class="caption">Always Together ❤️</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto8.jpg" />
+
+        <div class="caption">Always Together ❤️</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto9.jpg" />
+
+        <div class="caption">Always Together ❤️</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto10.jpg" />
+
+        <div class="caption">Always Together ❤️</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto11.jpeg" />
+
+        <div class="caption">Always Together ❤️</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/foto12.jpeg" />
+
+        <div class="caption">Always Together ❤️</div>
+      </div>
+    </section>
+
+    <!-- ================= LOVE LETTER ================= -->
+
+    <section class="letter">
+      <div class="glass">
+        <h2>💌 Love Letter</h2>
+
+        <p id="typingText">
+          Terima kasih telah menjadi salah satu penyemangat dalam setiap
+          perjalanan hidupku. Semoga semua perjalanan ini selalu menjadi cerita
+          terindah. ❤️
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= MENU ================= -->
+
+    <section class="menu-grid">
+      <a href="album.html" class="menu-card">
+        <i class="fa-solid fa-images"></i>
+
+        <h3>Album</h3>
+
+        <p>Lihat semua kenangan.</p>
+      </a>
+
+      <a href="timeline.html" class="menu-card">
+        <i class="fa-solid fa-heart"></i>
+
+        <h3>Timeline</h3>
+
+        <p>Perjalanan cinta.</p>
+      </a>
+
+      <a href="surat.html" class="menu-card">
+        <i class="fa-solid fa-envelope-open-heart"></i>
+
+        <h3>Love Letter</h3>
+
+        <p>Surat spesial.</p>
+      </a>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <div class="footer-content">
+        <h2>❤️ Our Memories ❤️</h2>
+
+        <p>"Every Moment With You Is My Favorite Memory."</p>
+
+        <div class="footer-social">
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="#">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+
+        <p class="copyright">© 2022 Our Memories</p>
+      </div>
+    </footer>
+
+    <!-- ================= LIGHTBOX ================= -->
+
+    <div id="lightbox">
+      <span id="closeLightbox"> &times; </span>
+
+      <img id="lightboxImg" />
+    </div>
+
+    <!-- ================= SCRIPT ================= -->
+
+    <script src="js/app.js"></script>
+
+    <script src="js/animation.js"></script>
+
+    <script src="js/music.js"></script>
+
+    <script src="js/countdown.js"></script>
+
+    <script src="js/gallery.js"></script>
+  </body>
+</html>
