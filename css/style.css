@@ -677,9 +677,71 @@ MOBILE
 @media (max-width: 768px) {
   nav {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    height: 70px;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav ul {
+    display: flex;
     gap: 15px;
-    padding: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 8px;
+  }
+
+  .nav-right button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .hero-image img {
+    width: 250px;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 28px;
   }
 
   .logo {
